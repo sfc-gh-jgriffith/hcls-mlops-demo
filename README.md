@@ -20,6 +20,50 @@ Hospital readmissions within 30 days are a key quality metric. CMS penalizes hos
 - Improving patient outcomes
 - Avoiding regulatory penalties
 
+---
+
+## Demo Setup Flow
+
+### Phase 1: Bootstrap (5 min)
+
+Run `00a_bootstrap.sql` in a **Snowsight Worksheet** to create the database and connect the Git repository:
+
+```sql
+-- Run in Snowsight Worksheet
+-- This creates the database and connects the Git repo
+```
+
+The bootstrap script:
+- Creates `HEALTHCARE_MLOPS` database
+- Creates `ML` schema
+- Sets up GitHub API integration (if needed)
+- Connects this Git repository to Snowflake
+
+### Phase 2: Explore Git Integration in Snowsight (5 min)
+
+After running the bootstrap:
+
+1. Navigate to: **Data → Databases → HEALTHCARE_MLOPS → ML → Git Repositories → NOTEBOOKS_REPO**
+2. Browse the repository files in the Snowsight UI
+3. Show the notebooks and SQL files synced from GitHub
+
+### Phase 3: Run Main Setup (10 min)
+
+Open `00b_setup.sql` from the Git repository and run it to create:
+- Remaining schemas (RAW, CURATED, FEATURE_STORE, STAGING)
+- Warehouse
+- Internal stage for data files
+- Raw tables (PATIENTS, ENCOUNTERS, CONDITIONS)
+- Streams for CDC
+- Roles and privileges
+
+### Phase 4: Upload Data & Run Notebooks (90 min)
+
+1. **Upload data files** to the internal stage
+2. **Run notebooks** in order: 01 → 02 → 03 → 04
+
+---
+
 ## Architecture
 
 ```
@@ -51,68 +95,68 @@ Hospital readmissions within 30 days are a key quality metric. CMS penalizes hos
 └────────────────────────────────────────────────────────────────────────┘
 ```
 
+---
+
 ## Prerequisites
 
 - Snowflake account with:
   - ACCOUNTADMIN role (for initial setup)
   - Snowpark ML enabled
   - Snowflake Notebooks access
-- Snowflake CLI (for data upload)
 
-## Quick Start
+---
 
-### 1. Run Setup Script
+## Detailed Setup Instructions
 
-Execute the setup script in Snowflake to create all required objects:
+### Step 1: Run Bootstrap Script
+
+In a Snowsight SQL Worksheet, open and run `00a_bootstrap.sql`:
 
 ```sql
--- In Snowflake Worksheet or Snowsight
-!source 00_setup.sql
+-- Creates database, ML schema, and connects Git repo
+-- See 00a_bootstrap.sql for full script
 ```
 
-### 2. Upload Data to Internal Stage
+### Step 2: Run Main Setup Script
 
-```bash
-# Using Snowflake CLI
-snow stage copy data/patients.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/patients/
-snow stage copy data/encounters.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/encounters/
-snow stage copy data/conditions.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/conditions/
-```
+Open `00b_setup.sql` from the Git repository in Snowsight and run it.
 
-Or using SQL:
+### Step 3: Upload Data to Internal Stage
+
+**Option A: Using SnowSQL**
 ```sql
 PUT file:///path/to/data/patients.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/patients/;
 PUT file:///path/to/data/encounters.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/encounters/;
 PUT file:///path/to/data/conditions.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/conditions/;
 ```
 
-### 3. Run Notebooks in Order
+**Option B: Using Snowflake CLI**
+```bash
+snow stage copy data/patients.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/patients/
+snow stage copy data/encounters.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/encounters/
+snow stage copy data/conditions.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/conditions/
+```
 
-Import and run each notebook in Snowflake Notebooks:
+### Step 4: Run Demo Notebooks
+
+Run each notebook in order from Snowsight:
 
 1. `notebooks/01_data_ingestion_pipeline.ipynb`
 2. `notebooks/02_feature_engineering.ipynb`
 3. `notebooks/03_model_training.ipynb`
 4. `notebooks/04_inference_monitoring.ipynb`
 
-## Git Integration (Snowsight)
+---
 
-To demonstrate Snowflake's Git integration:
+## Syncing Git Updates
 
-1. Push this repo to GitHub
-2. Create Git Repository in Snowflake:
+After making changes and pushing to GitHub:
 
 ```sql
-CREATE OR REPLACE GIT REPOSITORY HEALTHCARE_MLOPS.ML.NOTEBOOKS_REPO
-    API_INTEGRATION = GITHUB_INTEGRATION
-    ORIGIN = 'https://github.com/<your-org>/feature-store-demo.git';
-
--- List files from repo
-LIST @HEALTHCARE_MLOPS.ML.NOTEBOOKS_REPO/branches/main/notebooks/;
-
--- Fetch updates
 ALTER GIT REPOSITORY HEALTHCARE_MLOPS.ML.NOTEBOOKS_REPO FETCH;
 ```
+
+---
 
 ## Data Dictionary
 
@@ -148,6 +192,8 @@ ALTER GIT REPOSITORY HEALTHCARE_MLOPS.ML.NOTEBOOKS_REPO FETCH;
 | START_DATE | Onset date |
 | STOP_DATE | Resolution date (NULL if chronic) |
 
+---
+
 ## Features Created
 
 ### Patient Demographics (10 features)
@@ -173,10 +219,13 @@ ALTER GIT REPOSITORY HEALTHCARE_MLOPS.ML.NOTEBOOKS_REPO FETCH;
 - Primary diagnosis category
 - Cost metrics
 
+---
+
 ## Snowflake Features Demonstrated
 
 | Feature | Description |
 |---------|-------------|
+| **Git Integration** | Sync notebooks and SQL from GitHub |
 | **Internal Stages** | Secure data storage and loading |
 | **Streams** | Change Data Capture for incremental processing |
 | **Dynamic Tables** | Declarative data transformation pipelines |
@@ -185,18 +234,20 @@ ALTER GIT REPOSITORY HEALTHCARE_MLOPS.ML.NOTEBOOKS_REPO FETCH;
 | **Model Registry** | Model versioning, metrics, and deployment |
 | **Tasks** | Scheduled pipeline orchestration |
 | **Alerts** | Automated monitoring notifications |
-| **Git Integration** | Version control for notebooks and code |
+
+---
 
 ## File Structure
 
 ```
-feature-store-demo/
-├── 00_setup.sql                              # Environment setup script
+hcls-mlops-demo/
+├── 00a_bootstrap.sql                         # Run FIRST - creates DB & Git repo
+├── 00b_setup.sql                             # Run SECOND - creates all objects
 ├── README.md                                 # This file
 ├── data/
-│   ├── patients.csv                          # Synthetic patient data
-│   ├── encounters.csv                        # Hospital encounters
-│   └── conditions.csv                        # Patient diagnoses
+│   ├── patients.csv                          # Synthetic patient data (50 rows)
+│   ├── encounters.csv                        # Hospital encounters (100 rows)
+│   └── conditions.csv                        # Patient diagnoses (133 rows)
 └── notebooks/
     ├── 01_data_ingestion_pipeline.ipynb      # Data loading & pipelines
     ├── 02_feature_engineering.ipynb          # Feature Store setup
@@ -204,27 +255,34 @@ feature-store-demo/
     └── 04_inference_monitoring.ipynb         # Production deployment
 ```
 
-## Notes
-
-- Data is synthetic (Synthea-style) and HIPAA-safe
-- The same architecture works with external S3/Azure/GCS stages
-- Model monitoring requires Snowflake ML Observability (check availability)
-- For production, add proper error handling and retry logic
+---
 
 ## Estimated Demo Duration
 
 | Section | Time |
 |---------|------|
-| Setup & Data Load | 10 min |
-| Notebook 1: Data Pipeline | 30 min |
-| Notebook 2: Feature Store | 30 min |
-| Notebook 3: Model Training | 30 min |
-| Notebook 4: Inference | 30 min |
+| Bootstrap & Git Integration | 10 min |
+| Main Setup & Data Upload | 15 min |
+| Notebook 1: Data Pipeline | 25 min |
+| Notebook 2: Feature Store | 25 min |
+| Notebook 3: Model Training | 25 min |
+| Notebook 4: Inference | 25 min |
 | **Total** | **~2 hours** |
+
+---
+
+## Notes
+
+- Data is synthetic (Synthea-style) and HIPAA-safe
+- The same architecture works with external S3/Azure/GCS stages
+- For production, add proper error handling and retry logic
+
+---
 
 ## Resources
 
 - [Snowflake Feature Store Documentation](https://docs.snowflake.com/en/developer-guide/snowpark-ml/feature-store)
 - [Snowflake ML Model Registry](https://docs.snowflake.com/en/developer-guide/snowpark-ml/model-registry)
 - [Dynamic Tables](https://docs.snowflake.com/en/user-guide/dynamic-tables)
+- [Git Integration](https://docs.snowflake.com/en/developer-guide/git/git-overview)
 - [Streams and Tasks](https://docs.snowflake.com/en/user-guide/streams)

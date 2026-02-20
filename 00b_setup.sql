@@ -1,23 +1,24 @@
 -- ============================================================================
--- Healthcare MLOps Demo - Environment Setup
+-- Healthcare MLOps Demo - Main Setup
 -- ============================================================================
--- This script sets up all required Snowflake resources for the demo:
---   - Database, schemas, and warehouse
+-- 
+-- PREREQUISITE: Run 00a_bootstrap.sql first to create database and Git repo.
+--
+-- This script creates all remaining objects for the demo:
+--   - Additional schemas
+--   - Warehouse
 --   - Internal stage for data files
---   - Git integration for notebook deployment
---   - Required privileges
+--   - Raw tables and streams
+--   - Role and privileges
+--
 -- ============================================================================
 
--- Use ACCOUNTADMIN for initial setup (adjust role as needed)
 USE ROLE ACCOUNTADMIN;
-
--- ============================================================================
--- 1. CREATE DATABASE AND SCHEMAS
--- ============================================================================
-
-CREATE DATABASE IF NOT EXISTS HEALTHCARE_MLOPS;
-
 USE DATABASE HEALTHCARE_MLOPS;
+
+-- ============================================================================
+-- 1. CREATE SCHEMAS
+-- ============================================================================
 
 -- Schema for raw/bronze data
 CREATE SCHEMA IF NOT EXISTS RAW;
@@ -28,11 +29,10 @@ CREATE SCHEMA IF NOT EXISTS CURATED;
 -- Schema for feature store objects
 CREATE SCHEMA IF NOT EXISTS FEATURE_STORE;
 
--- Schema for ML models and inference
-CREATE SCHEMA IF NOT EXISTS ML;
-
 -- Schema for staging data files
 CREATE SCHEMA IF NOT EXISTS STAGING;
+
+-- ML schema already created in bootstrap
 
 -- ============================================================================
 -- 2. CREATE WAREHOUSE
@@ -167,62 +167,10 @@ CREATE STREAM IF NOT EXISTS CONDITIONS_STREAM ON TABLE CONDITIONS
     COMMENT = 'CDC stream for new condition records';
 
 -- ============================================================================
--- 6. GIT INTEGRATION SETUP
--- ============================================================================
--- 
--- IMPORTANT: API Integration requires ACCOUNTADMIN role to create.
--- If GITHUB_INTEGRATION already exists in your account, skip this step.
---
--- To check if it exists: SHOW API INTEGRATIONS LIKE 'GITHUB%';
+-- 6. CREATE NETWORK RULE FOR EXTERNAL PACKAGES (if needed)
 -- ============================================================================
 
--- Create API integration for GitHub (for PUBLIC repositories)
-CREATE API INTEGRATION IF NOT EXISTS GITHUB_INTEGRATION
-    API_PROVIDER = GIT_HTTPS_API
-    API_ALLOWED_PREFIXES = ('https://github.com/')
-    ENABLED = TRUE
-    COMMENT = 'Git integration for GitHub repositories';
-
--- ============================================================================
--- FOR PRIVATE REPOSITORIES ONLY:
--- Uncomment and configure the following to access private repos
--- ============================================================================
--- 
--- Step 1: Create a GitHub Personal Access Token (PAT)
---   - Go to GitHub → Settings → Developer settings → Personal access tokens
---   - Generate a token with 'repo' scope (for private repos)
---
--- Step 2: Create a secret to store the PAT
--- CREATE OR REPLACE SECRET HEALTHCARE_MLOPS.ML.GITHUB_PAT
---     TYPE = PASSWORD
---     USERNAME = 'your-github-username'
---     PASSWORD = 'ghp_xxxxxxxxxxxx';  -- Your GitHub PAT
---
--- Step 3: Reference the secret when creating Git Repository
--- CREATE OR REPLACE GIT REPOSITORY HEALTHCARE_MLOPS.ML.NOTEBOOKS_REPO
---     API_INTEGRATION = GITHUB_INTEGRATION
---     GIT_CREDENTIALS = HEALTHCARE_MLOPS.ML.GITHUB_PAT
---     ORIGIN = 'https://github.com/your-org/private-repo.git';
--- ============================================================================
-
--- For PUBLIC repositories (no credentials needed):
--- Run this AFTER pushing code to GitHub
--- 
--- CREATE OR REPLACE GIT REPOSITORY HEALTHCARE_MLOPS.ML.NOTEBOOKS_REPO
---     API_INTEGRATION = GITHUB_INTEGRATION
---     ORIGIN = 'https://github.com/sfc-gh-jgriffith/hcls-mlops-demo.git';
---
--- To sync updates after git push:
--- ALTER GIT REPOSITORY HEALTHCARE_MLOPS.ML.NOTEBOOKS_REPO FETCH;
---
--- To list files:
--- LIST @HEALTHCARE_MLOPS.ML.NOTEBOOKS_REPO/branches/main/notebooks/;
-
--- ============================================================================
--- 7. CREATE NETWORK RULE FOR EXTERNAL PACKAGES (if needed)
--- ============================================================================
-
--- Network rule for PyPI access (for custom packages)
+-- Network rule for PyPI access (for custom packages in notebooks)
 CREATE NETWORK RULE IF NOT EXISTS PYPI_NETWORK_RULE
     MODE = EGRESS
     TYPE = HOST_PORT
@@ -233,7 +181,7 @@ CREATE EXTERNAL ACCESS INTEGRATION IF NOT EXISTS PYPI_ACCESS_INTEGRATION
     ENABLED = TRUE;
 
 -- ============================================================================
--- 8. GRANT PRIVILEGES
+-- 7. GRANT PRIVILEGES
 -- ============================================================================
 
 -- Create role for demo users
@@ -258,40 +206,38 @@ GRANT USAGE ON WAREHOUSE HEALTHCARE_ML_WH TO ROLE HEALTHCARE_ML_ROLE;
 -- Grant stage privileges
 GRANT READ, WRITE ON STAGE HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE TO ROLE HEALTHCARE_ML_ROLE;
 
--- Grant role to current user (adjust as needed)
+-- Grant role to current user (uncomment and adjust as needed)
 -- GRANT ROLE HEALTHCARE_ML_ROLE TO USER <your_username>;
 
 -- ============================================================================
--- 9. VERIFICATION QUERIES
+-- 8. VERIFICATION
 -- ============================================================================
 
 -- Verify setup
-SHOW DATABASES LIKE 'HEALTHCARE_MLOPS';
 SHOW SCHEMAS IN DATABASE HEALTHCARE_MLOPS;
 SHOW TABLES IN SCHEMA HEALTHCARE_MLOPS.RAW;
 SHOW STREAMS IN SCHEMA HEALTHCARE_MLOPS.RAW;
 SHOW STAGES IN SCHEMA HEALTHCARE_MLOPS.STAGING;
 
 -- ============================================================================
--- USAGE INSTRUCTIONS:
+-- NEXT STEPS:
 -- ============================================================================
 -- 
--- After running this setup script:
+-- 1. Upload data files to internal stage (from local machine):
 --
--- 1. Upload data files to internal stage:
---    PUT file://path/to/patients.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/patients/;
---    PUT file://path/to/encounters.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/encounters/;
---    PUT file://path/to/conditions.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/conditions/;
+--    PUT file:///path/to/data/patients.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/patients/;
+--    PUT file:///path/to/data/encounters.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/encounters/;
+--    PUT file:///path/to/data/conditions.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/conditions/;
+--
+--    Or using Snowflake CLI:
+--    snow stage copy data/patients.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/patients/
+--    snow stage copy data/encounters.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/encounters/
+--    snow stage copy data/conditions.csv @HEALTHCARE_MLOPS.STAGING.HEALTHCARE_DATA_STAGE/conditions/
 --
 -- 2. Run the notebooks in order:
 --    - 01_data_ingestion_pipeline.ipynb
 --    - 02_feature_engineering.ipynb
 --    - 03_model_training.ipynb
 --    - 04_inference_monitoring.ipynb
---
--- 3. For Git integration, commit notebooks to GitHub and create Git Repository:
---    CREATE GIT REPOSITORY HEALTHCARE_MLOPS.ML.NOTEBOOKS_REPO
---        API_INTEGRATION = GITHUB_INTEGRATION
---        ORIGIN = 'https://github.com/<org>/feature-store-demo.git';
 --
 -- ============================================================================
