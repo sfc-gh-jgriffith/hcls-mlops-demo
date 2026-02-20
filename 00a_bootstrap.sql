@@ -40,10 +40,13 @@ CREATE API INTEGRATION IF NOT EXISTS GITHUB_INTEGRATION
 -- ============================================================================
 -- 3. CONNECT GIT REPOSITORY
 -- ============================================================================
+-- 
+-- Public repo - no credentials needed
 
 CREATE OR REPLACE GIT REPOSITORY HEALTHCARE_MLOPS.ML.NOTEBOOKS_REPO
     API_INTEGRATION = GITHUB_INTEGRATION
     ORIGIN = 'https://github.com/sfc-gh-jgriffith/hcls-mlops-demo.git';
+    -- Public repository: https://github.com/sfc-gh-jgriffith/hcls-mlops-demo
 
 -- ============================================================================
 -- 4. VERIFY CONNECTION
