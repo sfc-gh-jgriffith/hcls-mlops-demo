@@ -169,26 +169,54 @@ CREATE STREAM IF NOT EXISTS CONDITIONS_STREAM ON TABLE CONDITIONS
 -- ============================================================================
 -- 6. GIT INTEGRATION SETUP
 -- ============================================================================
+-- 
+-- IMPORTANT: API Integration requires ACCOUNTADMIN role to create.
+-- If GITHUB_INTEGRATION already exists in your account, skip this step.
+--
+-- To check if it exists: SHOW API INTEGRATIONS LIKE 'GITHUB%';
+-- ============================================================================
 
--- Create API integration for GitHub (adjust URL for your repo)
--- NOTE: Replace <your-github-pat> with actual token for production
-CREATE OR REPLACE API INTEGRATION GITHUB_INTEGRATION
+-- Create API integration for GitHub (for PUBLIC repositories)
+CREATE API INTEGRATION IF NOT EXISTS GITHUB_INTEGRATION
     API_PROVIDER = GIT_HTTPS_API
     API_ALLOWED_PREFIXES = ('https://github.com/')
     ENABLED = TRUE
-    COMMENT = 'Git integration for Healthcare MLOps demo notebooks';
+    COMMENT = 'Git integration for GitHub repositories';
 
--- Create secret for Git authentication (optional - for private repos)
--- CREATE OR REPLACE SECRET GITHUB_PAT
---     TYPE = GENERIC_STRING
---     SECRET_STRING = '<your-github-pat>'
---     COMMENT = 'GitHub Personal Access Token';
-
--- Git repository will be created after notebooks are committed
--- Example command (run after git push):
--- CREATE OR REPLACE GIT REPOSITORY HEALTHCARE_MLOPS_REPO
+-- ============================================================================
+-- FOR PRIVATE REPOSITORIES ONLY:
+-- Uncomment and configure the following to access private repos
+-- ============================================================================
+-- 
+-- Step 1: Create a GitHub Personal Access Token (PAT)
+--   - Go to GitHub → Settings → Developer settings → Personal access tokens
+--   - Generate a token with 'repo' scope (for private repos)
+--
+-- Step 2: Create a secret to store the PAT
+-- CREATE OR REPLACE SECRET HEALTHCARE_MLOPS.ML.GITHUB_PAT
+--     TYPE = PASSWORD
+--     USERNAME = 'your-github-username'
+--     PASSWORD = 'ghp_xxxxxxxxxxxx';  -- Your GitHub PAT
+--
+-- Step 3: Reference the secret when creating Git Repository
+-- CREATE OR REPLACE GIT REPOSITORY HEALTHCARE_MLOPS.ML.NOTEBOOKS_REPO
 --     API_INTEGRATION = GITHUB_INTEGRATION
---     ORIGIN = 'https://github.com/<your-org>/feature-store-demo.git';
+--     GIT_CREDENTIALS = HEALTHCARE_MLOPS.ML.GITHUB_PAT
+--     ORIGIN = 'https://github.com/your-org/private-repo.git';
+-- ============================================================================
+
+-- For PUBLIC repositories (no credentials needed):
+-- Run this AFTER pushing code to GitHub
+-- 
+-- CREATE OR REPLACE GIT REPOSITORY HEALTHCARE_MLOPS.ML.NOTEBOOKS_REPO
+--     API_INTEGRATION = GITHUB_INTEGRATION
+--     ORIGIN = 'https://github.com/sfc-gh-jgriffith/hcls-mlops-demo.git';
+--
+-- To sync updates after git push:
+-- ALTER GIT REPOSITORY HEALTHCARE_MLOPS.ML.NOTEBOOKS_REPO FETCH;
+--
+-- To list files:
+-- LIST @HEALTHCARE_MLOPS.ML.NOTEBOOKS_REPO/branches/main/notebooks/;
 
 -- ============================================================================
 -- 7. CREATE NETWORK RULE FOR EXTERNAL PACKAGES (if needed)
