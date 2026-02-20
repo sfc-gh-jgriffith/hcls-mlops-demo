@@ -1,0 +1,133 @@
+START_DATE,STOP_DATE,PATIENT_ID,ENCOUNTER_ID,CODE,DESCRIPTION
+2024-01-15,2024-01-18,P001,E001,I10,Essential (primary) hypertension
+2024-01-15,,P001,E001,E78.5,Hyperlipidemia unspecified
+2024-01-20,2024-01-20,P001,E002,I10,Essential (primary) hypertension
+2024-02-05,2024-02-08,P001,E003,I50.9,Heart failure unspecified
+2024-02-05,,P001,E003,I10,Essential (primary) hypertension
+2024-01-10,2024-01-10,P002,E004,E11.9,Type 2 diabetes mellitus without complications
+2024-02-01,2024-02-04,P002,E005,E11.65,Type 2 diabetes mellitus with hyperglycemia
+2024-02-01,,P002,E005,E78.5,Hyperlipidemia unspecified
+2024-02-28,2024-03-01,P002,E006,E11.65,Type 2 diabetes mellitus with hyperglycemia
+2024-01-05,2024-01-05,P003,E007,C34.90,Malignant neoplasm of unspecified part of bronchus or lung
+2024-01-25,2024-02-05,P003,E008,C34.90,Malignant neoplasm of unspecified part of bronchus or lung
+2024-01-25,,P003,E008,J18.9,Pneumonia unspecified organism
+2024-03-01,2024-03-15,P003,E009,C34.90,Malignant neoplasm of unspecified part of bronchus or lung
+2024-03-01,,P003,E009,R64,Cachexia
+2024-01-08,2024-01-08,P004,E010,J06.9,Acute upper respiratory infection unspecified
+2024-02-20,2024-02-22,P004,E011,J18.9,Pneumonia unspecified organism
+2024-01-12,2024-01-12,P005,E012,M54.5,Low back pain
+2024-03-05,2024-03-08,P005,E013,M54.5,Low back pain
+2024-03-05,,P005,E013,M51.16,Intervertebral disc disorders with radiculopathy lumbar region
+2024-01-18,2024-01-21,P006,E014,I25.10,Atherosclerotic heart disease of native coronary artery
+2024-01-18,,P006,E014,I10,Essential (primary) hypertension
+2024-02-10,2024-02-10,P006,E015,I25.10,Atherosclerotic heart disease of native coronary artery
+2024-02-25,2024-03-02,P006,E016,I21.9,Acute myocardial infarction unspecified
+2024-02-25,,P006,E016,I25.10,Atherosclerotic heart disease of native coronary artery
+2024-01-22,2024-01-22,P007,E017,N18.3,Chronic kidney disease stage 3 moderate
+2024-01-22,,P007,E017,I10,Essential (primary) hypertension
+2024-02-15,2024-02-20,P007,E018,N18.4,Chronic kidney disease stage 4 severe
+2024-02-15,,P007,E018,E11.9,Type 2 diabetes mellitus without complications
+2024-03-10,2024-03-12,P007,E019,N18.4,Chronic kidney disease stage 4 severe
+2024-03-10,,P007,E019,D63.1,Anemia in chronic kidney disease
+2024-01-05,2024-01-05,P008,E020,F32.1,Major depressive disorder single episode moderate
+2024-02-08,2024-02-08,P008,E021,F32.1,Major depressive disorder single episode moderate
+2024-01-28,2024-01-31,P009,E022,K80.20,Calculus of gallbladder without cholecystitis without obstruction
+2024-02-25,2024-02-25,P009,E023,K80.20,Calculus of gallbladder without cholecystitis without obstruction
+2024-01-15,2024-01-15,P010,E024,J45.20,Mild intermittent asthma uncomplicated
+2024-03-01,2024-03-03,P010,E025,J45.41,Moderate persistent asthma with acute exacerbation
+2024-01-08,2024-01-12,P011,E026,I63.9,Cerebral infarction unspecified
+2024-01-08,,P011,E026,I10,Essential (primary) hypertension
+2024-02-05,2024-02-05,P011,E027,I63.9,Cerebral infarction unspecified
+2024-02-05,,P011,E027,G81.91,Hemiplegia unspecified affecting right dominant side
+2024-02-20,2024-02-24,P011,E028,I63.9,Cerebral infarction unspecified
+2024-01-20,2024-01-20,P012,E029,E78.5,Hyperlipidemia unspecified
+2024-02-28,2024-03-02,P012,E030,I10,Essential (primary) hypertension
+2024-02-28,,P012,E030,I16.9,Hypertensive crisis unspecified
+2024-01-10,2024-01-10,P013,E031,M79.3,Panniculitis unspecified
+2024-03-08,2024-03-08,P013,E032,M79.3,Panniculitis unspecified
+2024-01-25,2024-02-02,P014,E033,I50.33,Acute on chronic diastolic congestive heart failure
+2024-01-25,,P014,E033,I10,Essential (primary) hypertension
+2024-02-20,2024-02-20,P014,E034,I50.33,Acute on chronic diastolic congestive heart failure
+2024-03-05,2024-03-10,P014,E035,I50.33,Acute on chronic diastolic congestive heart failure
+2024-03-05,,P014,E035,N17.9,Acute kidney failure unspecified
+2024-01-12,2024-01-12,P015,E036,K21.0,Gastro-esophageal reflux disease with esophagitis
+2024-02-15,2024-02-15,P015,E037,K21.0,Gastro-esophageal reflux disease with esophagitis
+2024-01-18,2024-01-22,P016,E038,G40.909,Epilepsy unspecified not intractable without status epilepticus
+2024-02-28,2024-03-01,P016,E039,G40.909,Epilepsy unspecified not intractable without status epilepticus
+2024-01-05,2024-01-05,P017,E040,R10.9,Unspecified abdominal pain
+2024-02-10,2024-02-13,P017,E041,K35.80,Unspecified acute appendicitis
+2024-01-22,2024-01-22,P018,E042,J44.1,Chronic obstructive pulmonary disease with acute exacerbation
+2024-02-05,2024-02-10,P018,E043,J44.1,Chronic obstructive pulmonary disease with acute exacerbation
+2024-02-05,,P018,E043,J96.00,Acute respiratory failure unspecified whether with hypoxia or hypercapnia
+2024-03-01,2024-03-05,P018,E044,J44.1,Chronic obstructive pulmonary disease with acute exacerbation
+2024-01-15,2024-01-15,P019,E045,N39.0,Urinary tract infection site not specified
+2024-02-20,2024-02-22,P019,E046,N39.0,Urinary tract infection site not specified
+2024-02-20,,P019,E046,R65.20,Severe sepsis without septic shock
+2024-01-08,2024-01-08,P020,E047,E03.9,Hypothyroidism unspecified
+2024-02-25,2024-02-25,P020,E048,E03.9,Hypothyroidism unspecified
+2024-01-28,2024-02-05,P021,E049,S72.001A,Fracture of unspecified part of neck of right femur initial encounter for closed fracture
+2024-03-01,2024-03-01,P021,E050,S72.001A,Fracture of unspecified part of neck of right femur initial encounter for closed fracture
+2024-01-10,2024-01-10,P022,E051,J30.9,Allergic rhinitis unspecified
+2024-03-05,2024-03-05,P022,E052,J30.9,Allergic rhinitis unspecified
+2024-01-20,2024-01-24,P023,E053,I48.91,Unspecified atrial fibrillation
+2024-01-20,,P023,E053,I10,Essential (primary) hypertension
+2024-02-15,2024-02-17,P023,E054,I48.91,Unspecified atrial fibrillation
+2024-01-05,2024-01-05,P024,E055,G43.909,Migraine unspecified not intractable without status migrainosus
+2024-02-08,2024-02-11,P024,E056,G43.909,Migraine unspecified not intractable without status migrainosus
+2024-02-08,,P024,E056,R11.2,Nausea with vomiting unspecified
+2024-03-10,2024-03-10,P024,E057,G43.909,Migraine unspecified not intractable without status migrainosus
+2024-01-15,2024-01-15,P025,E058,L40.0,Psoriasis vulgaris
+2024-02-20,2024-02-20,P025,E059,L40.0,Psoriasis vulgaris
+2024-01-25,2024-01-30,P026,E060,K85.90,Acute pancreatitis without necrosis or infection unspecified
+2024-01-25,,P026,E060,K86.1,Other chronic pancreatitis
+2024-02-25,2024-02-28,P026,E061,K85.90,Acute pancreatitis without necrosis or infection unspecified
+2024-01-08,2024-01-08,P027,E062,M25.561,Pain in right knee
+2024-02-12,2024-02-14,P027,E063,M17.11,Primary osteoarthritis right knee
+2024-01-18,2024-01-18,P028,E064,I73.9,Peripheral vascular disease unspecified
+2024-01-18,,P028,E064,E11.9,Type 2 diabetes mellitus without complications
+2024-02-28,2024-03-05,P028,E065,I73.9,Peripheral vascular disease unspecified
+2024-02-28,,P028,E065,I70.233,Atherosclerosis of native arteries of right leg with ulceration of ankle
+2024-01-10,2024-01-10,P029,E066,R51.9,Headache unspecified
+2024-03-01,2024-03-01,P029,E067,R51.9,Headache unspecified
+2024-01-22,2024-01-26,P030,E068,N20.0,Calculus of kidney
+2024-01-22,,P030,E068,N23,Unspecified renal colic
+2024-02-18,2024-02-18,P030,E069,N20.0,Calculus of kidney
+2024-01-05,2024-01-10,P031,E070,I26.99,Other pulmonary embolism without acute cor pulmonale
+2024-01-05,,P031,E070,I82.401,Acute embolism and thrombosis of unspecified deep veins of right lower extremity
+2024-02-01,2024-02-01,P031,E071,I26.99,Other pulmonary embolism without acute cor pulmonale
+2024-02-25,2024-02-28,P031,E072,I26.99,Other pulmonary embolism without acute cor pulmonale
+2024-01-15,2024-01-15,P032,E073,F41.1,Generalized anxiety disorder
+2024-02-20,2024-02-20,P032,E074,F41.1,Generalized anxiety disorder
+2024-01-28,2024-02-01,P033,E075,C50.919,Malignant neoplasm of unspecified site of unspecified female breast
+2024-03-05,2024-03-05,P033,E076,C50.919,Malignant neoplasm of unspecified site of unspecified female breast
+2024-01-10,2024-01-10,P034,E077,E66.01,Morbid severe obesity due to excess calories
+2024-01-10,,P034,E077,E11.9,Type 2 diabetes mellitus without complications
+2024-02-15,2024-02-18,P034,E078,E66.01,Morbid severe obesity due to excess calories
+2024-01-20,2024-01-20,P035,E079,K58.9,Irritable bowel syndrome without diarrhea
+2024-03-01,2024-03-01,P035,E080,K58.9,Irritable bowel syndrome without diarrhea
+2024-01-08,2024-01-12,P036,E081,M47.816,Spondylosis without myelopathy or radiculopathy cervical region
+2024-01-08,,P036,E081,M54.2,Cervicalgia
+2024-02-10,2024-02-10,P036,E082,M47.816,Spondylosis without myelopathy or radiculopathy cervical region
+2024-01-25,2024-01-25,P037,E083,D50.9,Iron deficiency anemia unspecified
+2024-02-22,2024-02-24,P037,E084,D50.9,Iron deficiency anemia unspecified
+2024-02-22,,P037,E084,D62,Acute posthemorrhagic anemia
+2024-01-12,2024-01-12,P038,E085,G20,Parkinson disease
+2024-02-28,2024-03-04,P038,E086,G20,Parkinson disease
+2024-02-28,,P038,E086,R26.81,Unsteadiness on feet
+2024-01-05,2024-01-05,P039,E087,N95.1,Menopausal and female climacteric states
+2024-02-12,2024-02-12,P039,E088,N95.1,Menopausal and female climacteric states
+2024-01-18,2024-01-22,P040,E089,J15.9,Unspecified bacterial pneumonia
+2024-01-18,,P040,E089,R65.20,Severe sepsis without septic shock
+2024-02-15,2024-02-15,P040,E090,J15.9,Unspecified bacterial pneumonia
+2024-01-28,2024-02-08,P041,E091,S32.000A,Wedge compression fracture of unspecified lumbar vertebra initial encounter for closed fracture
+2024-03-05,2024-03-05,P041,E092,S32.000A,Wedge compression fracture of unspecified lumbar vertebra initial encounter for closed fracture
+2024-01-10,2024-01-10,P042,E093,L70.0,Acne vulgaris
+2024-02-18,2024-02-18,P042,E094,L70.0,Acne vulgaris
+2024-01-22,2024-01-25,P043,E095,N80.9,Endometriosis unspecified
+2024-02-25,2024-02-25,P043,E096,N80.9,Endometriosis unspecified
+2024-01-05,2024-01-09,P044,E097,I70.213,Atherosclerosis of native arteries of extremities with intermittent claudication bilateral legs
+2024-01-05,,P044,E097,I10,Essential (primary) hypertension
+2024-02-01,2024-02-01,P044,E098,I70.213,Atherosclerosis of native arteries of extremities with intermittent claudication bilateral legs
+2024-02-28,2024-03-03,P044,E099,I70.213,Atherosclerosis of native arteries of extremities with intermittent claudication bilateral legs
+2024-02-28,,P044,E099,I70.263,Atherosclerosis of native arteries of extremities with gangrene bilateral legs
+2024-01-15,2024-01-15,P045,E100,M81.0,Age-related osteoporosis without current pathological fracture

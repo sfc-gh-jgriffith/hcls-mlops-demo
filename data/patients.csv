@@ -1,0 +1,51 @@
+PATIENT_ID,BIRTH_DATE,DEATH_DATE,SSN,DRIVERS_LICENSE,PASSPORT,PREFIX,FIRST_NAME,LAST_NAME,SUFFIX,MAIDEN_NAME,MARITAL_STATUS,RACE,ETHNICITY,GENDER,BIRTHPLACE,ADDRESS,CITY,STATE,COUNTY,ZIP,LAT,LON,HEALTHCARE_EXPENSES,HEALTHCARE_COVERAGE,INCOME
+P001,1955-03-12,,999-12-3456,S12345678,,Mr.,James,Wilson,,,,M,white,nonhispanic,M,Boston MA,123 Oak Street,Springfield,Massachusetts,Hampden,01103,42.1015,-72.5898,125000.50,95000.00,65000
+P002,1968-07-24,,999-23-4567,S23456789,,Mrs.,Maria,Garcia,,,Rodriguez,M,white,hispanic,F,Miami FL,456 Palm Avenue,Tampa,Florida,Hillsborough,33601,27.9506,-82.4572,89000.25,72000.00,55000
+P003,1942-11-08,2024-08-15,999-34-5678,S34567890,,Mr.,Robert,Johnson,,,,W,black,nonhispanic,M,Chicago IL,789 Maple Drive,Chicago,Illinois,Cook,60601,41.8781,-87.6298,245000.00,180000.00,42000
+P004,1975-05-30,,999-45-6789,S45678901,,Ms.,Sarah,Chen,,,,S,asian,nonhispanic,F,San Francisco CA,321 Pine Road,San Jose,California,Santa Clara,95101,37.3382,-121.8863,67000.75,55000.00,78000
+P005,1988-09-15,,999-56-7890,S56789012,,Mr.,Michael,Brown,,,,S,white,nonhispanic,M,Seattle WA,654 Cedar Lane,Portland,Oregon,Multnomah,97201,45.5152,-122.6784,45000.00,38000.00,92000
+P006,1960-02-28,,999-67-8901,S67890123,,Mrs.,Linda,Martinez,,,Sanchez,M,white,hispanic,F,Phoenix AZ,987 Birch Street,Tucson,Arizona,Pima,85701,32.2226,-110.9747,178000.50,145000.00,48000
+P007,1950-08-20,,999-78-9012,S78901234,,Mr.,William,Anderson,,,,M,white,nonhispanic,M,Denver CO,147 Elm Court,Denver,Colorado,Denver,80201,39.7392,-104.9903,312000.00,250000.00,38000
+P008,1982-12-05,,999-89-0123,S89012345,,Ms.,Jennifer,Lee,,,,S,asian,nonhispanic,F,New York NY,258 Spruce Way,Brooklyn,New York,Kings,11201,40.6892,-73.9857,52000.25,42000.00,85000
+P009,1970-04-18,,999-90-1234,S90123456,,Mr.,David,Thompson,,,,D,white,nonhispanic,M,Atlanta GA,369 Walnut Drive,Atlanta,Georgia,Fulton,30301,33.7490,-84.3880,145000.00,118000.00,62000
+P010,1995-01-22,,999-01-2345,S01234567,,Ms.,Emily,Davis,,,,S,black,nonhispanic,F,Dallas TX,741 Ash Boulevard,Houston,Texas,Harris,77001,29.7604,-95.3698,28000.50,22000.00,45000
+P011,1958-06-10,,999-11-3456,S11345678,,Mr.,Richard,White,,,,M,white,nonhispanic,M,Philadelphia PA,852 Oak Lane,Philadelphia,Pennsylvania,Philadelphia,19101,39.9526,-75.1652,198000.75,162000.00,52000
+P012,1972-10-03,,999-22-4567,S22456789,,Mrs.,Patricia,Harris,,,Jones,M,black,nonhispanic,F,Detroit MI,963 Maple Avenue,Detroit,Michigan,Wayne,48201,42.3314,-83.0458,135000.00,110000.00,58000
+P013,1985-03-27,,999-33-5678,S33567890,,Mr.,Christopher,Martin,,,,S,white,nonhispanic,M,Minneapolis MN,159 Pine Street,Minneapolis,Minnesota,Hennepin,55401,44.9778,-93.2650,48000.25,39000.00,72000
+P014,1948-09-14,,999-44-6789,S44678901,,Mrs.,Barbara,Jackson,,,Williams,W,white,nonhispanic,F,St. Louis MO,267 Cedar Road,St. Louis,Missouri,St. Louis City,63101,38.6270,-90.1994,285000.50,230000.00,35000
+P015,1990-07-08,,999-55-7890,S55789012,,Ms.,Jessica,Taylor,,,,S,white,hispanic,F,Las Vegas NV,378 Birch Lane,Las Vegas,Nevada,Clark,89101,36.1699,-115.1398,35000.00,28000.00,68000
+P016,1963-01-25,,999-66-8901,S66890123,,Mr.,Thomas,Moore,,,,M,asian,nonhispanic,M,Honolulu HI,489 Elm Street,Honolulu,Hawaii,Honolulu,96801,21.3069,-157.8583,156000.75,128000.00,55000
+P017,1978-11-12,,999-77-9012,S77901234,,Mrs.,Nancy,Clark,,,Brown,M,white,nonhispanic,F,Salt Lake City UT,591 Spruce Court,Salt Lake City,Utah,Salt Lake,84101,40.7608,-111.8910,98000.00,80000.00,64000
+P018,1952-04-06,,999-88-0123,S88012345,,Mr.,Daniel,Lewis,,,,M,black,nonhispanic,M,Baltimore MD,602 Walnut Way,Baltimore,Maryland,Baltimore City,21201,39.2904,-76.6122,225000.25,185000.00,41000
+P019,1983-08-30,,999-99-1234,S99123456,,Ms.,Karen,Walker,,,,S,white,nonhispanic,F,Nashville TN,713 Ash Drive,Nashville,Tennessee,Davidson,37201,36.1627,-86.7816,62000.50,50000.00,76000
+P020,1967-12-19,,999-10-2345,S10234567,,Mr.,Mark,Hall,,,,M,white,hispanic,M,San Diego CA,824 Oak Court,San Diego,California,San Diego,92101,32.7157,-117.1611,142000.00,115000.00,59000
+P021,1945-05-02,,999-21-3456,S21345678,,Mrs.,Betty,Allen,,,Miller,W,white,nonhispanic,F,Kansas City MO,935 Maple Boulevard,Kansas City,Missouri,Jackson,64101,39.0997,-94.5786,298000.75,242000.00,32000
+P022,1992-02-14,,999-32-4567,S32456789,,Mr.,Steven,Young,,,,S,asian,nonhispanic,M,Austin TX,146 Pine Lane,Austin,Texas,Travis,78701,30.2672,-97.7431,32000.00,26000.00,88000
+P023,1976-06-28,,999-43-5678,S43567890,,Ms.,Donna,King,,,,D,white,nonhispanic,F,Columbus OH,257 Cedar Avenue,Columbus,Ohio,Franklin,43201,39.9612,-82.9988,108000.25,88000.00,61000
+P024,1959-10-21,,999-54-6789,S54678901,,Mr.,Paul,Wright,,,,M,white,nonhispanic,M,Charlotte NC,368 Birch Road,Charlotte,North Carolina,Mecklenburg,28201,35.2271,-80.8431,175000.50,143000.00,54000
+P025,1987-04-09,,999-65-7890,S65789012,,Mrs.,Michelle,Scott,,,Davis,M,black,nonhispanic,F,Indianapolis IN,479 Elm Drive,Indianapolis,Indiana,Marion,46201,39.7684,-86.1581,55000.00,45000.00,69000
+P026,1953-07-16,,999-76-8901,S76890123,,Mr.,George,Green,,,,M,white,nonhispanic,M,Milwaukee WI,581 Spruce Street,Milwaukee,Wisconsin,Milwaukee,53201,43.0389,-87.9065,210000.75,172000.00,45000
+P027,1980-01-04,,999-87-9012,S87901234,,Ms.,Laura,Adams,,,,S,white,hispanic,F,Albuquerque NM,692 Walnut Lane,Albuquerque,New Mexico,Bernalillo,87101,35.0844,-106.6504,72000.00,58000.00,73000
+P028,1965-09-23,,999-98-0123,S98012345,,Mr.,Kevin,Nelson,,,,M,asian,nonhispanic,M,Omaha NE,703 Ash Court,Omaha,Nebraska,Douglas,68101,41.2565,-95.9345,165000.25,135000.00,56000
+P029,1998-05-17,,999-09-1234,S09123456,,Ms.,Amanda,Baker,,,,S,white,nonhispanic,F,Raleigh NC,814 Oak Way,Raleigh,North Carolina,Wake,27601,35.7796,-78.6382,22000.50,18000.00,52000
+P030,1971-03-11,,999-20-2345,S20234567,,Mr.,Brian,Gonzalez,,,,M,white,hispanic,M,Miami FL,925 Maple Street,Miami,Florida,Miami-Dade,33101,25.7617,-80.1918,128000.00,104000.00,67000
+P031,1956-08-05,,999-31-3456,S31345678,,Mrs.,Kimberly,Carter,,,Thompson,M,white,nonhispanic,F,Cleveland OH,136 Pine Court,Cleveland,Ohio,Cuyahoga,44101,41.4993,-81.6944,188000.75,154000.00,49000
+P032,1984-12-29,,999-42-4567,S42456789,,Mr.,Jason,Mitchell,,,,S,black,nonhispanic,M,Virginia Beach VA,247 Cedar Boulevard,Virginia Beach,Virginia,Virginia Beach City,23451,36.8529,-75.9780,48000.00,39000.00,71000
+P033,1949-02-18,,999-53-5678,S53567890,,Mrs.,Dorothy,Perez,,,Garcia,W,white,hispanic,F,Oakland CA,358 Birch Street,Oakland,California,Alameda,94601,37.8044,-122.2712,268000.25,218000.00,36000
+P034,1973-06-14,,999-64-6789,S64678901,,Mr.,Jeffrey,Roberts,,,,M,white,nonhispanic,M,Tulsa OK,469 Elm Avenue,Tulsa,Oklahoma,Tulsa,74101,36.1540,-95.9928,118000.50,96000.00,60000
+P035,1991-10-07,,999-75-7890,S75789012,,Ms.,Stephanie,Turner,,,,S,asian,nonhispanic,F,New Orleans LA,571 Spruce Road,New Orleans,Louisiana,Orleans,70112,29.9511,-90.0715,38000.00,31000.00,65000
+P036,1962-04-22,,999-86-8901,S86890123,,Mr.,Gregory,Phillips,,,,M,white,nonhispanic,M,Wichita KS,682 Walnut Drive,Wichita,Kansas,Sedgwick,67201,37.6872,-97.3301,152000.75,124000.00,53000
+P037,1977-08-09,,999-97-9012,S97901234,,Mrs.,Rebecca,Campbell,,,Wilson,M,black,nonhispanic,F,Arlington TX,793 Ash Lane,Arlington,Texas,Tarrant,76001,32.7357,-97.1081,95000.00,77000.00,63000
+P038,1954-12-31,,999-08-0123,S08012345,,Mr.,Edward,Parker,,,,M,white,nonhispanic,M,Bakersfield CA,804 Oak Drive,Bakersfield,California,Kern,93301,35.3733,-119.0187,195000.25,159000.00,47000
+P039,1986-03-25,,999-19-1234,S19123456,,Ms.,Sharon,Evans,,,,S,white,hispanic,F,Tampa FL,915 Maple Way,Tampa,Florida,Hillsborough,33602,27.9506,-82.4572,58000.50,47000.00,74000
+P040,1969-07-18,,999-30-2345,S30234567,,Mr.,Ronald,Edwards,,,,M,white,nonhispanic,M,Honolulu HI,126 Pine Boulevard,Honolulu,Hawaii,Honolulu,96802,21.3069,-157.8583,138000.00,112000.00,57000
+P041,1943-11-26,,999-41-3456,S41345678,,Mrs.,Helen,Collins,,,Anderson,W,white,nonhispanic,F,Aurora CO,237 Cedar Court,Aurora,Colorado,Arapahoe,80010,39.7294,-104.8319,275000.75,224000.00,34000
+P042,1994-05-13,,999-52-4567,S52456789,,Mr.,Timothy,Stewart,,,,S,asian,nonhispanic,M,Anaheim CA,348 Birch Avenue,Anaheim,California,Orange,92801,33.8366,-117.9143,30000.00,24000.00,82000
+P043,1979-09-06,,999-63-5678,S63567890,,Ms.,Deborah,Sanchez,,,,D,white,hispanic,F,Santa Ana CA,459 Elm Road,Santa Ana,California,Orange,92701,33.7455,-117.8677,85000.25,69000.00,66000
+P044,1957-01-30,,999-74-6789,S74678901,,Mr.,Larry,Morris,,,,M,black,nonhispanic,M,St. Petersburg FL,561 Spruce Lane,St. Petersburg,Florida,Pinellas,33701,27.7676,-82.6403,182000.50,148000.00,50000
+P045,1981-05-24,,999-85-7890,S85789012,,Mrs.,Carolyn,Rogers,,,Lee,M,white,nonhispanic,F,Pittsburgh PA,672 Walnut Street,Pittsburgh,Pennsylvania,Allegheny,15201,40.4406,-79.9959,68000.00,55000.00,70000
+P046,1966-09-17,,999-96-8901,S96890123,,Mr.,Stephen,Reed,,,,M,white,nonhispanic,M,Corpus Christi TX,783 Ash Way,Corpus Christi,Texas,Nueces,78401,27.8006,-97.3964,148000.75,121000.00,55000
+P047,1989-01-11,,999-07-9012,S07901234,,Ms.,Janet,Cook,,,,S,white,nonhispanic,F,Lexington KY,894 Oak Street,Lexington,Kentucky,Fayette,40502,38.0406,-84.5037,42000.00,34000.00,77000
+P048,1951-04-04,,999-18-0123,S18012345,,Mr.,Raymond,Morgan,,,,M,asian,nonhispanic,M,Anchorage AK,905 Maple Lane,Anchorage,Alaska,Anchorage,99501,61.2181,-149.9003,232000.25,189000.00,43000
+P049,1974-08-28,,999-29-1234,S29123456,,Mrs.,Catherine,Bell,,,Martinez,M,white,hispanic,F,Stockton CA,116 Pine Drive,Stockton,California,San Joaquin,95201,37.9577,-121.2908,105000.50,86000.00,62000
+P050,1996-12-21,,999-40-2345,S40234567,,Mr.,Dennis,Murphy,,,,S,white,nonhispanic,M,Newark NJ,227 Cedar Way,Newark,New Jersey,Essex,07101,40.7357,-74.1724,25000.00,20000.00,48000

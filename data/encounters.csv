@@ -1,0 +1,101 @@
+ENCOUNTER_ID,START_DATETIME,STOP_DATETIME,PATIENT_ID,ORGANIZATION_ID,PROVIDER_ID,PAYER_ID,ENCOUNTER_CLASS,CODE,DESCRIPTION,BASE_ENCOUNTER_COST,TOTAL_CLAIM_COST,PAYER_COVERAGE,REASON_CODE,REASON_DESCRIPTION
+E001,2024-01-15 08:30:00,2024-01-18 14:00:00,P001,ORG001,PROV001,PAY001,inpatient,99223,Initial hospital care high severity,1500.00,12500.00,10000.00,I10,Essential hypertension
+E002,2024-01-20 10:00:00,2024-01-20 11:30:00,P001,ORG001,PROV002,PAY001,outpatient,99214,Office visit established patient,150.00,250.00,200.00,I10,Essential hypertension follow-up
+E003,2024-02-05 09:15:00,2024-02-08 16:45:00,P001,ORG001,PROV001,PAY001,inpatient,99223,Initial hospital care high severity,1500.00,15800.00,12640.00,I50.9,Heart failure unspecified
+E004,2024-01-10 14:00:00,2024-01-10 15:00:00,P002,ORG002,PROV003,PAY002,ambulatory,99213,Office visit established patient,100.00,180.00,144.00,E11.9,Type 2 diabetes without complications
+E005,2024-02-01 07:45:00,2024-02-04 12:30:00,P002,ORG002,PROV004,PAY002,inpatient,99222,Initial hospital care moderate severity,1200.00,9800.00,7840.00,E11.65,Type 2 diabetes with hyperglycemia
+E006,2024-02-28 09:00:00,2024-03-01 18:00:00,P002,ORG002,PROV004,PAY002,inpatient,99221,Initial hospital care low severity,900.00,6500.00,5200.00,E11.65,Type 2 diabetes with hyperglycemia
+E007,2024-01-05 11:00:00,2024-01-05 12:00:00,P003,ORG003,PROV005,PAY003,ambulatory,99215,Office visit established patient high,200.00,350.00,280.00,C34.90,Lung cancer unspecified
+E008,2024-01-25 08:00:00,2024-02-05 10:00:00,P003,ORG003,PROV006,PAY003,inpatient,99223,Initial hospital care high severity,1500.00,45000.00,36000.00,C34.90,Lung cancer treatment
+E009,2024-03-01 09:30:00,2024-03-15 14:00:00,P003,ORG003,PROV006,PAY003,inpatient,99223,Initial hospital care high severity,1500.00,52000.00,41600.00,C34.90,Lung cancer complications
+E010,2024-01-08 10:30:00,2024-01-08 11:15:00,P004,ORG001,PROV007,PAY001,ambulatory,99213,Office visit established patient,100.00,165.00,132.00,J06.9,Upper respiratory infection
+E011,2024-02-20 08:00:00,2024-02-22 16:00:00,P004,ORG001,PROV001,PAY001,inpatient,99221,Initial hospital care low severity,900.00,4200.00,3360.00,J18.9,Pneumonia unspecified
+E012,2024-01-12 13:00:00,2024-01-12 14:30:00,P005,ORG002,PROV008,PAY002,outpatient,99214,Office visit established patient,150.00,225.00,180.00,M54.5,Low back pain
+E013,2024-03-05 07:30:00,2024-03-08 11:00:00,P005,ORG002,PROV004,PAY002,inpatient,99222,Initial hospital care moderate severity,1200.00,8500.00,6800.00,M54.5,Low back pain surgical intervention
+E014,2024-01-18 15:00:00,2024-01-21 09:30:00,P006,ORG003,PROV009,PAY003,inpatient,99222,Initial hospital care moderate severity,1200.00,11200.00,8960.00,I25.10,Coronary artery disease
+E015,2024-02-10 08:00:00,2024-02-10 09:00:00,P006,ORG003,PROV005,PAY003,ambulatory,99214,Office visit established patient,150.00,280.00,224.00,I25.10,Coronary artery disease follow-up
+E016,2024-02-25 06:00:00,2024-03-02 15:00:00,P006,ORG003,PROV009,PAY003,inpatient,99223,Initial hospital care high severity,1500.00,28500.00,22800.00,I21.9,Acute myocardial infarction
+E017,2024-01-22 09:00:00,2024-01-22 10:30:00,P007,ORG001,PROV010,PAY001,outpatient,99215,Office visit established patient high,200.00,400.00,320.00,N18.3,Chronic kidney disease stage 3
+E018,2024-02-15 07:00:00,2024-02-20 13:00:00,P007,ORG001,PROV001,PAY001,inpatient,99223,Initial hospital care high severity,1500.00,22000.00,17600.00,N18.4,Chronic kidney disease stage 4
+E019,2024-03-10 08:30:00,2024-03-12 16:00:00,P007,ORG001,PROV001,PAY001,inpatient,99222,Initial hospital care moderate severity,1200.00,9500.00,7600.00,N18.4,Chronic kidney disease complications
+E020,2024-01-05 11:30:00,2024-01-05 12:30:00,P008,ORG002,PROV011,PAY002,ambulatory,99213,Office visit established patient,100.00,175.00,140.00,F32.1,Major depressive disorder moderate
+E021,2024-02-08 14:00:00,2024-02-08 15:00:00,P008,ORG002,PROV011,PAY002,outpatient,99214,Office visit established patient,150.00,225.00,180.00,F32.1,Major depressive disorder follow-up
+E022,2024-01-28 09:00:00,2024-01-31 12:00:00,P009,ORG003,PROV012,PAY003,inpatient,99222,Initial hospital care moderate severity,1200.00,10500.00,8400.00,K80.20,Gallstone with cholecystitis
+E023,2024-02-25 08:00:00,2024-02-25 09:30:00,P009,ORG003,PROV005,PAY003,ambulatory,99214,Office visit established patient,150.00,250.00,200.00,K80.20,Gallstone post-operative follow-up
+E024,2024-01-15 10:00:00,2024-01-15 11:00:00,P010,ORG001,PROV013,PAY001,ambulatory,99213,Office visit established patient,100.00,160.00,128.00,J45.20,Mild intermittent asthma
+E025,2024-03-01 06:30:00,2024-03-03 14:00:00,P010,ORG001,PROV001,PAY001,inpatient,99221,Initial hospital care low severity,900.00,5800.00,4640.00,J45.41,Moderate persistent asthma with exacerbation
+E026,2024-01-08 08:00:00,2024-01-12 11:00:00,P011,ORG002,PROV014,PAY002,inpatient,99223,Initial hospital care high severity,1500.00,18500.00,14800.00,I63.9,Cerebral infarction
+E027,2024-02-05 09:00:00,2024-02-05 10:30:00,P011,ORG002,PROV003,PAY002,outpatient,99215,Office visit established patient high,200.00,350.00,280.00,I63.9,Stroke follow-up
+E028,2024-02-20 07:00:00,2024-02-24 15:00:00,P011,ORG002,PROV014,PAY002,inpatient,99222,Initial hospital care moderate severity,1200.00,14200.00,11360.00,I63.9,Stroke rehabilitation
+E029,2024-01-20 14:30:00,2024-01-20 15:30:00,P012,ORG003,PROV015,PAY003,ambulatory,99214,Office visit established patient,150.00,280.00,224.00,E78.5,Hyperlipidemia
+E030,2024-02-28 08:00:00,2024-03-02 12:00:00,P012,ORG003,PROV009,PAY003,inpatient,99222,Initial hospital care moderate severity,1200.00,9800.00,7840.00,I10,Hypertensive crisis
+E031,2024-01-10 11:00:00,2024-01-10 12:00:00,P013,ORG001,PROV016,PAY001,ambulatory,99213,Office visit established patient,100.00,165.00,132.00,M79.3,Panniculitis
+E032,2024-03-08 09:30:00,2024-03-08 10:30:00,P013,ORG001,PROV016,PAY001,outpatient,99214,Office visit established patient,150.00,225.00,180.00,M79.3,Panniculitis follow-up
+E033,2024-01-25 07:00:00,2024-02-02 14:00:00,P014,ORG002,PROV017,PAY002,inpatient,99223,Initial hospital care high severity,1500.00,32000.00,25600.00,I50.33,Acute on chronic diastolic heart failure
+E034,2024-02-20 08:30:00,2024-02-20 09:30:00,P014,ORG002,PROV003,PAY002,ambulatory,99215,Office visit established patient high,200.00,380.00,304.00,I50.33,Heart failure follow-up
+E035,2024-03-05 06:00:00,2024-03-10 16:00:00,P014,ORG002,PROV017,PAY002,inpatient,99223,Initial hospital care high severity,1500.00,28500.00,22800.00,I50.33,Heart failure exacerbation
+E036,2024-01-12 10:00:00,2024-01-12 11:00:00,P015,ORG003,PROV018,PAY003,ambulatory,99213,Office visit established patient,100.00,175.00,140.00,K21.0,GERD with esophagitis
+E037,2024-02-15 13:00:00,2024-02-15 14:30:00,P015,ORG003,PROV018,PAY003,outpatient,99214,Office visit established patient,150.00,240.00,192.00,K21.0,GERD follow-up
+E038,2024-01-18 08:00:00,2024-01-22 10:00:00,P016,ORG001,PROV019,PAY001,inpatient,99222,Initial hospital care moderate severity,1200.00,13500.00,10800.00,G40.909,Epilepsy unspecified
+E039,2024-02-28 07:30:00,2024-03-01 15:00:00,P016,ORG001,PROV019,PAY001,inpatient,99221,Initial hospital care low severity,900.00,5200.00,4160.00,G40.909,Seizure follow-up
+E040,2024-01-05 09:00:00,2024-01-05 10:00:00,P017,ORG002,PROV020,PAY002,ambulatory,99213,Office visit established patient,100.00,160.00,128.00,R10.9,Abdominal pain unspecified
+E041,2024-02-10 08:00:00,2024-02-13 14:00:00,P017,ORG002,PROV004,PAY002,inpatient,99222,Initial hospital care moderate severity,1200.00,11800.00,9440.00,K35.80,Acute appendicitis
+E042,2024-01-22 11:00:00,2024-01-22 12:00:00,P018,ORG003,PROV021,PAY003,ambulatory,99214,Office visit established patient,150.00,275.00,220.00,J44.1,COPD with acute exacerbation
+E043,2024-02-05 06:30:00,2024-02-10 13:00:00,P018,ORG003,PROV006,PAY003,inpatient,99223,Initial hospital care high severity,1500.00,19500.00,15600.00,J44.1,COPD severe exacerbation
+E044,2024-03-01 08:00:00,2024-03-05 11:00:00,P018,ORG003,PROV006,PAY003,inpatient,99222,Initial hospital care moderate severity,1200.00,12200.00,9760.00,J44.1,COPD continued treatment
+E045,2024-01-15 14:00:00,2024-01-15 15:00:00,P019,ORG001,PROV022,PAY001,ambulatory,99213,Office visit established patient,100.00,170.00,136.00,N39.0,Urinary tract infection
+E046,2024-02-20 10:00:00,2024-02-22 16:00:00,P019,ORG001,PROV001,PAY001,inpatient,99221,Initial hospital care low severity,900.00,4800.00,3840.00,N39.0,UTI with complications
+E047,2024-01-08 09:30:00,2024-01-08 10:30:00,P020,ORG002,PROV023,PAY002,ambulatory,99214,Office visit established patient,150.00,250.00,200.00,E03.9,Hypothyroidism
+E048,2024-02-25 08:00:00,2024-02-25 09:00:00,P020,ORG002,PROV023,PAY002,outpatient,99213,Office visit established patient,100.00,180.00,144.00,E03.9,Hypothyroidism follow-up
+E049,2024-01-28 07:00:00,2024-02-05 15:00:00,P021,ORG003,PROV024,PAY003,inpatient,99223,Initial hospital care high severity,1500.00,42000.00,33600.00,S72.001A,Femur fracture
+E050,2024-03-01 09:00:00,2024-03-01 10:30:00,P021,ORG003,PROV005,PAY003,ambulatory,99215,Office visit established patient high,200.00,380.00,304.00,S72.001A,Femur fracture post-op follow-up
+E051,2024-01-10 10:30:00,2024-01-10 11:30:00,P022,ORG001,PROV025,PAY001,ambulatory,99213,Office visit established patient,100.00,165.00,132.00,J30.9,Allergic rhinitis
+E052,2024-03-05 08:30:00,2024-03-05 09:30:00,P022,ORG001,PROV025,PAY001,outpatient,99213,Office visit established patient,100.00,165.00,132.00,J30.9,Allergic rhinitis follow-up
+E053,2024-01-20 08:00:00,2024-01-24 12:00:00,P023,ORG002,PROV026,PAY002,inpatient,99222,Initial hospital care moderate severity,1200.00,15800.00,12640.00,I48.91,Atrial fibrillation
+E054,2024-02-15 07:00:00,2024-02-17 14:00:00,P023,ORG002,PROV026,PAY002,inpatient,99221,Initial hospital care low severity,900.00,6200.00,4960.00,I48.91,Atrial fibrillation cardioversion
+E055,2024-01-05 13:00:00,2024-01-05 14:00:00,P024,ORG003,PROV027,PAY003,ambulatory,99214,Office visit established patient,150.00,260.00,208.00,G43.909,Migraine unspecified
+E056,2024-02-08 11:00:00,2024-02-11 15:00:00,P024,ORG003,PROV009,PAY003,inpatient,99222,Initial hospital care moderate severity,1200.00,8900.00,7120.00,G43.909,Severe migraine with complications
+E057,2024-03-10 09:00:00,2024-03-10 10:00:00,P024,ORG003,PROV027,PAY003,outpatient,99214,Office visit established patient,150.00,260.00,208.00,G43.909,Migraine follow-up
+E058,2024-01-15 08:30:00,2024-01-15 09:30:00,P025,ORG001,PROV028,PAY001,ambulatory,99213,Office visit established patient,100.00,175.00,140.00,L40.0,Psoriasis vulgaris
+E059,2024-02-20 14:00:00,2024-02-20 15:00:00,P025,ORG001,PROV028,PAY001,outpatient,99214,Office visit established patient,150.00,240.00,192.00,L40.0,Psoriasis treatment follow-up
+E060,2024-01-25 07:30:00,2024-01-30 11:00:00,P026,ORG002,PROV029,PAY002,inpatient,99223,Initial hospital care high severity,1500.00,24500.00,19600.00,K85.90,Acute pancreatitis
+E061,2024-02-25 08:00:00,2024-02-28 14:00:00,P026,ORG002,PROV029,PAY002,inpatient,99222,Initial hospital care moderate severity,1200.00,12800.00,10240.00,K85.90,Pancreatitis recurrence
+E062,2024-01-08 10:00:00,2024-01-08 11:00:00,P027,ORG003,PROV030,PAY003,ambulatory,99213,Office visit established patient,100.00,165.00,132.00,M25.561,Right knee pain
+E063,2024-02-12 09:00:00,2024-02-14 16:00:00,P027,ORG003,PROV009,PAY003,inpatient,99221,Initial hospital care low severity,900.00,18500.00,14800.00,M17.11,Primary osteoarthritis right knee
+E064,2024-01-18 11:30:00,2024-01-18 12:30:00,P028,ORG001,PROV031,PAY001,ambulatory,99214,Office visit established patient,150.00,265.00,212.00,I73.9,Peripheral vascular disease
+E065,2024-02-28 07:00:00,2024-03-05 13:00:00,P028,ORG001,PROV001,PAY001,inpatient,99223,Initial hospital care high severity,1500.00,35000.00,28000.00,I73.9,PVD surgical intervention
+E066,2024-01-10 09:00:00,2024-01-10 10:00:00,P029,ORG002,PROV032,PAY002,ambulatory,99213,Office visit established patient,100.00,155.00,124.00,R51.9,Headache unspecified
+E067,2024-03-01 10:30:00,2024-03-01 11:30:00,P029,ORG002,PROV032,PAY002,outpatient,99213,Office visit established patient,100.00,155.00,124.00,R51.9,Headache follow-up
+E068,2024-01-22 08:00:00,2024-01-26 15:00:00,P030,ORG003,PROV033,PAY003,inpatient,99222,Initial hospital care moderate severity,1200.00,14200.00,11360.00,N20.0,Kidney stone
+E069,2024-02-18 09:00:00,2024-02-18 10:30:00,P030,ORG003,PROV005,PAY003,ambulatory,99214,Office visit established patient,150.00,275.00,220.00,N20.0,Kidney stone follow-up
+E070,2024-01-05 07:00:00,2024-01-10 12:00:00,P031,ORG001,PROV034,PAY001,inpatient,99223,Initial hospital care high severity,1500.00,28000.00,22400.00,I26.99,Pulmonary embolism
+E071,2024-02-01 08:30:00,2024-02-01 09:30:00,P031,ORG001,PROV010,PAY001,ambulatory,99215,Office visit established patient high,200.00,350.00,280.00,I26.99,Pulmonary embolism follow-up
+E072,2024-02-25 06:30:00,2024-02-28 14:00:00,P031,ORG001,PROV034,PAY001,inpatient,99222,Initial hospital care moderate severity,1200.00,11500.00,9200.00,I26.99,PE anticoagulation management
+E073,2024-01-15 10:00:00,2024-01-15 11:00:00,P032,ORG002,PROV035,PAY002,ambulatory,99213,Office visit established patient,100.00,170.00,136.00,F41.1,Generalized anxiety disorder
+E074,2024-02-20 14:30:00,2024-02-20 15:30:00,P032,ORG002,PROV035,PAY002,outpatient,99214,Office visit established patient,150.00,235.00,188.00,F41.1,Anxiety follow-up
+E075,2024-01-28 08:00:00,2024-02-01 16:00:00,P033,ORG003,PROV036,PAY003,inpatient,99223,Initial hospital care high severity,1500.00,38000.00,30400.00,C50.919,Breast cancer
+E076,2024-03-05 09:00:00,2024-03-05 10:30:00,P033,ORG003,PROV005,PAY003,ambulatory,99215,Office visit established patient high,200.00,400.00,320.00,C50.919,Breast cancer treatment follow-up
+E077,2024-01-10 11:00:00,2024-01-10 12:00:00,P034,ORG001,PROV037,PAY001,ambulatory,99214,Office visit established patient,150.00,255.00,204.00,E66.01,Morbid obesity
+E078,2024-02-15 08:00:00,2024-02-18 11:00:00,P034,ORG001,PROV001,PAY001,inpatient,99222,Initial hospital care moderate severity,1200.00,22000.00,17600.00,E66.01,Bariatric surgery
+E079,2024-01-20 09:30:00,2024-01-20 10:30:00,P035,ORG002,PROV038,PAY002,ambulatory,99213,Office visit established patient,100.00,165.00,132.00,K58.9,Irritable bowel syndrome
+E080,2024-03-01 13:00:00,2024-03-01 14:00:00,P035,ORG002,PROV038,PAY002,outpatient,99213,Office visit established patient,100.00,165.00,132.00,K58.9,IBS follow-up
+E081,2024-01-08 07:30:00,2024-01-12 15:00:00,P036,ORG003,PROV039,PAY003,inpatient,99222,Initial hospital care moderate severity,1200.00,16500.00,13200.00,M47.816,Cervical spondylosis
+E082,2024-02-10 09:00:00,2024-02-10 10:00:00,P036,ORG003,PROV027,PAY003,ambulatory,99214,Office visit established patient,150.00,265.00,212.00,M47.816,Cervical spondylosis follow-up
+E083,2024-01-25 10:00:00,2024-01-25 11:00:00,P037,ORG001,PROV040,PAY001,ambulatory,99214,Office visit established patient,150.00,250.00,200.00,D50.9,Iron deficiency anemia
+E084,2024-02-22 08:00:00,2024-02-24 14:00:00,P037,ORG001,PROV001,PAY001,inpatient,99221,Initial hospital care low severity,900.00,5500.00,4400.00,D50.9,Anemia severe requiring transfusion
+E085,2024-01-12 13:30:00,2024-01-12 14:30:00,P038,ORG002,PROV041,PAY002,ambulatory,99214,Office visit established patient,150.00,270.00,216.00,G20,Parkinson disease
+E086,2024-02-28 07:00:00,2024-03-04 12:00:00,P038,ORG002,PROV017,PAY002,inpatient,99222,Initial hospital care moderate severity,1200.00,13800.00,11040.00,G20,Parkinson disease complications
+E087,2024-01-05 08:00:00,2024-01-05 09:00:00,P039,ORG003,PROV042,PAY003,ambulatory,99213,Office visit established patient,100.00,160.00,128.00,N95.1,Menopausal symptoms
+E088,2024-02-12 11:00:00,2024-02-12 12:00:00,P039,ORG003,PROV042,PAY003,outpatient,99214,Office visit established patient,150.00,230.00,184.00,N95.1,Menopausal symptoms follow-up
+E089,2024-01-18 09:00:00,2024-01-22 14:00:00,P040,ORG001,PROV043,PAY001,inpatient,99222,Initial hospital care moderate severity,1200.00,12500.00,10000.00,J15.9,Bacterial pneumonia
+E090,2024-02-15 08:30:00,2024-02-15 09:30:00,P040,ORG001,PROV016,PAY001,ambulatory,99214,Office visit established patient,150.00,260.00,208.00,J15.9,Pneumonia follow-up
+E091,2024-01-28 07:00:00,2024-02-08 16:00:00,P041,ORG002,PROV044,PAY002,inpatient,99223,Initial hospital care high severity,1500.00,52000.00,41600.00,S32.000A,Lumbar vertebral fracture
+E092,2024-03-05 10:00:00,2024-03-05 11:30:00,P041,ORG002,PROV003,PAY002,ambulatory,99215,Office visit established patient high,200.00,380.00,304.00,S32.000A,Vertebral fracture follow-up
+E093,2024-01-10 10:00:00,2024-01-10 11:00:00,P042,ORG003,PROV045,PAY003,ambulatory,99213,Office visit established patient,100.00,155.00,124.00,L70.0,Acne vulgaris
+E094,2024-02-18 14:00:00,2024-02-18 15:00:00,P042,ORG003,PROV045,PAY003,outpatient,99213,Office visit established patient,100.00,155.00,124.00,L70.0,Acne treatment follow-up
+E095,2024-01-22 08:00:00,2024-01-25 12:00:00,P043,ORG001,PROV046,PAY001,inpatient,99222,Initial hospital care moderate severity,1200.00,18200.00,14560.00,N80.9,Endometriosis
+E096,2024-02-25 09:00:00,2024-02-25 10:30:00,P043,ORG001,PROV010,PAY001,ambulatory,99215,Office visit established patient high,200.00,350.00,280.00,N80.9,Endometriosis post-op follow-up
+E097,2024-01-05 11:00:00,2024-01-09 15:00:00,P044,ORG002,PROV047,PAY002,inpatient,99223,Initial hospital care high severity,1500.00,26000.00,20800.00,I70.213,Atherosclerosis with claudication
+E098,2024-02-01 08:00:00,2024-02-01 09:00:00,P044,ORG002,PROV023,PAY002,ambulatory,99214,Office visit established patient,150.00,280.00,224.00,I70.213,Atherosclerosis follow-up
+E099,2024-02-28 07:30:00,2024-03-03 14:00:00,P044,ORG002,PROV047,PAY002,inpatient,99222,Initial hospital care moderate severity,1200.00,32000.00,25600.00,I70.213,Atherosclerosis surgical intervention
+E100,2024-01-15 09:30:00,2024-01-15 10:30:00,P045,ORG003,PROV048,PAY003,ambulatory,99214,Office visit established patient,150.00,245.00,196.00,M81.0,Osteoporosis
